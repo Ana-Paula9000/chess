@@ -7,9 +7,15 @@ $db = 'chessmaster';
 
 $external_url = '/functions.php';
 
-$con = mysql_connect($host,$user,$pass) OR die('Sem Conexão!');
-mysql_select_db($db) OR die('DataBase não encontrada!');
+$connect=mysqli_connect("localhost","root","","formulario");
 
+if (!$connect) {
+
+	echo "error 4004";
+
+	exit;
+
+}
 
 function cleanMe($input) {
    $input = mysql_real_escape_string($input);
