@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://chessboardjs.com/examples/5000 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Only Allow Legal Moves Example</title>
+  <!--<base href="http://chessboardjs.com/">--><base href=".">
+
+  <link rel="stylesheet" href="./Only Allow Legal Moves Example_files/chessboard.css">
+</head>
+<body>
+<p><a href="http://chessboardjs.com/examples#5000">← Back to all examples.</a></p>
+
+<p>You can integrate ChessBoardJS with the <a href="https://github.com/jhlywa/chess.js">chess.js</a> library to only allow legal moves.
+</p>
+
+<!-- start example HTML --->
+<script src="./Only Allow Legal Moves Example_files/chess.js.download"></script>
+<div id="board" style="width: 400px"><div class="chessboard-63f37"><div class="board-b72b1" style="width: 392px;"><div class="row-5277c"><div class="square-55d63 white-1e1d7 square-a8" style="width: 49px; height: 49px" id="a8-20a4-b09c-2f61-1f33-d3d7-cd07-cba0-28cd" data-square="a8"><div class="notation-322f9 numeric-fc462">8</div><img src="./Only Allow Legal Moves Example_files/bR.png" alt="" class="piece-417db" data-piece="bR" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-b8" style="width: 49px; height: 49px" id="b8-3b20-bf26-3f59-be72-b7ef-19d8-3e26-3c11" data-square="b8"><img src="./Only Allow Legal Moves Example_files/bN.png" alt="" class="piece-417db" data-piece="bN" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-c8" style="width: 49px; height: 49px" id="c8-24ad-5cc2-d0dd-b07f-a5d1-01dc-c4d4-c154" data-square="c8"><img src="./Only Allow Legal Moves Example_files/bB.png" alt="" class="piece-417db" data-piece="bB" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-d8" style="width: 49px; height: 49px" id="d8-cb98-3bdd-6b9a-5948-3d67-9ae6-6e15-4cbc" data-square="d8"><img src="./Only Allow Legal Moves Example_files/bQ.png" alt="" class="piece-417db" data-piece="bQ" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-e8" style="width: 49px; height: 49px" id="e8-b9d1-1666-f2d4-78c3-5d29-c026-47ed-6e90" data-square="e8"><img src="./Only Allow Legal Moves Example_files/bK.png" alt="" class="piece-417db" data-piece="bK" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-f8" style="width: 49px; height: 49px" id="f8-2d1b-c159-4bb8-2c83-3eee-cb86-3acd-1f0d" data-square="f8"><img src="./Only Allow Legal Moves Example_files/bB.png" alt="" class="piece-417db" data-piece="bB" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-g8" style="width: 49px; height: 49px" id="g8-13a7-7ea9-6479-d051-eba2-212d-2f7b-87d0" data-square="g8"><img src="./Only Allow Legal Moves Example_files/bN.png" alt="" class="piece-417db" data-piece="bN" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-h8" style="width: 49px; height: 49px" id="h8-5478-0862-d615-46b2-5688-f02a-9e0a-9cd8" data-square="h8"><img src="./Only Allow Legal Moves Example_files/bR.png" alt="" class="piece-417db" data-piece="bR" style="width: 49px;height: 49px;"></div><div class="clearfix-7da63"></div></div><div class="row-5277c"><div class="square-55d63 black-3c85d square-a7" style="width: 49px; height: 49px" id="a7-d2ef-249a-1983-f996-ea77-9d40-0212-d16d" data-square="a7"><div class="notation-322f9 numeric-fc462">7</div><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-b7" style="width: 49px; height: 49px" id="b7-cdef-bc8b-8977-ae08-3500-bcb8-cc05-1058" data-square="b7"><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-c7" style="width: 49px; height: 49px" id="c7-fe0a-2267-74a4-8861-bbbb-0a48-a4f0-5e53" data-square="c7"><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-d7" style="width: 49px; height: 49px" id="d7-d317-9573-5505-822d-d49a-635a-ed4e-bb44" data-square="d7"><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-e7" style="width: 49px; height: 49px" id="e7-22b5-fc79-c3f9-4afd-593a-78ac-d237-177d" data-square="e7"></div><div class="square-55d63 white-1e1d7 square-f7" style="width: 49px; height: 49px" id="f7-31d2-4593-45e6-cdb2-a129-b614-ff81-204d" data-square="f7"><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-g7" style="width: 49px; height: 49px" id="g7-15f5-1de1-84dd-9e0b-737a-7f6d-f5f9-bed0" data-square="g7"><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-h7" style="width: 49px; height: 49px" id="h7-50b4-ded3-2adb-7212-63dc-42f2-e3fc-abb5" data-square="h7"><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="clearfix-7da63"></div></div><div class="row-5277c"><div class="square-55d63 white-1e1d7 square-a6" style="width: 49px; height: 49px" id="a6-cc52-0c81-ce50-6b64-23c9-5058-5183-091f" data-square="a6"><div class="notation-322f9 numeric-fc462">6</div></div><div class="square-55d63 black-3c85d square-b6" style="width: 49px; height: 49px" id="b6-4fea-ec43-9375-7048-ad24-c2e5-63f5-8be7" data-square="b6"></div><div class="square-55d63 white-1e1d7 square-c6" style="width: 49px; height: 49px" id="c6-792a-5634-f5d9-b7c9-23ce-5263-4a88-15b3" data-square="c6"></div><div class="square-55d63 black-3c85d square-d6" style="width: 49px; height: 49px" id="d6-e9d5-e85b-2433-7403-5cda-12db-24b4-6e03" data-square="d6"></div><div class="square-55d63 white-1e1d7 square-e6" style="width: 49px; height: 49px" id="e6-1afd-bae8-d93c-b94f-60d9-293b-9323-088e" data-square="e6"></div><div class="square-55d63 black-3c85d square-f6" style="width: 49px; height: 49px" id="f6-4c93-356a-fd11-b309-2b30-3ac6-7969-1143" data-square="f6"></div><div class="square-55d63 white-1e1d7 square-g6" style="width: 49px; height: 49px" id="g6-274f-5150-5895-2beb-12fe-c5dd-baac-04bb" data-square="g6"></div><div class="square-55d63 black-3c85d square-h6" style="width: 49px; height: 49px" id="h6-f3d5-cb9d-aec6-65de-ffe3-0bdf-0098-7d49" data-square="h6"></div><div class="clearfix-7da63"></div></div><div class="row-5277c"><div class="square-55d63 black-3c85d square-a5" style="width: 49px; height: 49px" id="a5-6c72-e7b1-0c04-c4d1-e573-8458-c1b1-4fed" data-square="a5"><div class="notation-322f9 numeric-fc462">5</div></div><div class="square-55d63 white-1e1d7 square-b5" style="width: 49px; height: 49px" id="b5-6a12-a336-5595-cd10-f9fc-ed5d-557d-714c" data-square="b5"></div><div class="square-55d63 black-3c85d square-c5" style="width: 49px; height: 49px" id="c5-b7b0-b0b6-b6d4-8b06-51b3-5c7a-7865-14c5" data-square="c5"></div><div class="square-55d63 white-1e1d7 square-d5" style="width: 49px; height: 49px" id="d5-b374-2651-b949-73e9-335f-f49d-8c5e-cbc9" data-square="d5"></div><div class="square-55d63 black-3c85d square-e5" style="width: 49px; height: 49px" id="e5-8368-c084-30c2-a120-eaac-f83c-3f4b-dc83" data-square="e5"><img src="./Only Allow Legal Moves Example_files/bP.png" alt="" class="piece-417db" data-piece="bP" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-f5" style="width: 49px; height: 49px" id="f5-3b20-9e11-c84b-c991-9c4c-02af-8fdc-59ea" data-square="f5"></div><div class="square-55d63 black-3c85d square-g5" style="width: 49px; height: 49px" id="g5-05c9-c3e9-8464-80d5-6098-40ee-2613-5bce" data-square="g5"></div><div class="square-55d63 white-1e1d7 square-h5" style="width: 49px; height: 49px" id="h5-6d01-1fb7-7393-516c-d217-72f0-6105-1118" data-square="h5"></div><div class="clearfix-7da63"></div></div><div class="row-5277c"><div class="square-55d63 white-1e1d7 square-a4" style="width: 49px; height: 49px" id="a4-7641-13fc-7df2-f42b-0b74-d288-02e1-9df2" data-square="a4"><div class="notation-322f9 numeric-fc462">4</div></div><div class="square-55d63 black-3c85d square-b4" style="width: 49px; height: 49px" id="b4-866a-19fa-7ec3-2f22-6692-1eb0-99c3-480f" data-square="b4"></div><div class="square-55d63 white-1e1d7 square-c4" style="width: 49px; height: 49px" id="c4-a84a-fe4c-55a3-5e63-d9a0-fc68-a07f-e9ba" data-square="c4"></div><div class="square-55d63 black-3c85d square-d4" style="width: 49px; height: 49px" id="d4-0729-cd76-0b6e-fb8c-fba4-e8d5-58fe-e69e" data-square="d4"></div><div class="square-55d63 white-1e1d7 square-e4" style="width: 49px; height: 49px" id="e4-6afe-623b-d2e6-7a82-fa44-f27d-1f9c-a795" data-square="e4"><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-f4" style="width: 49px; height: 49px" id="f4-f201-9087-5252-2050-b4ec-1bc2-cdbc-d6cf" data-square="f4"></div><div class="square-55d63 white-1e1d7 square-g4" style="width: 49px; height: 49px" id="g4-39ed-f03a-43c1-2b51-2f9c-d958-e923-bc9b" data-square="g4"></div><div class="square-55d63 black-3c85d square-h4" style="width: 49px; height: 49px" id="h4-d29f-fd42-f38f-96fc-c517-c4a3-91b0-a3ea" data-square="h4"></div><div class="clearfix-7da63"></div></div><div class="row-5277c"><div class="square-55d63 black-3c85d square-a3" style="width: 49px; height: 49px" id="a3-189c-8067-734f-eac7-4f94-d7e2-718b-9359" data-square="a3"><div class="notation-322f9 numeric-fc462">3</div></div><div class="square-55d63 white-1e1d7 square-b3" style="width: 49px; height: 49px" id="b3-bdd1-0453-ba3d-8f6c-0c8a-c76b-1cb2-d315" data-square="b3"></div><div class="square-55d63 black-3c85d square-c3" style="width: 49px; height: 49px" id="c3-c36b-9dae-81f9-9a4a-95ab-2652-e4c3-c442" data-square="c3"></div><div class="square-55d63 white-1e1d7 square-d3" style="width: 49px; height: 49px" id="d3-df58-c973-6e7e-ba1b-34a5-2dbd-c971-fb74" data-square="d3"></div><div class="square-55d63 black-3c85d square-e3" style="width: 49px; height: 49px" id="e3-7976-05ed-c2a8-0559-d426-8d2c-a372-5a67" data-square="e3"></div><div class="square-55d63 white-1e1d7 square-f3" style="width: 49px; height: 49px" id="f3-06d5-d0c0-d7a5-a742-0a44-f3d5-a4dd-e1f6" data-square="f3"></div><div class="square-55d63 black-3c85d square-g3" style="width: 49px; height: 49px" id="g3-d396-d263-c190-8262-a1a5-8931-7176-bc9c" data-square="g3"></div><div class="square-55d63 white-1e1d7 square-h3" style="width: 49px; height: 49px" id="h3-8c77-32eb-7b9d-2f21-929b-6b60-2e29-172e" data-square="h3"></div><div class="clearfix-7da63"></div></div><div class="row-5277c"><div class="square-55d63 white-1e1d7 square-a2" style="width: 49px; height: 49px" id="a2-2ac5-438c-7dba-b795-4dc7-976c-1a32-1896" data-square="a2"><div class="notation-322f9 numeric-fc462">2</div><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-b2" style="width: 49px; height: 49px" id="b2-3d4a-9f3a-1a9c-99e8-7c89-d809-7691-c9b0" data-square="b2"><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-c2" style="width: 49px; height: 49px" id="c2-2256-a826-4e25-fb5f-85c8-a6e8-afc6-6869" data-square="c2"><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-d2" style="width: 49px; height: 49px" id="d2-13ae-5060-4901-8a1c-3dad-a516-b32e-638c" data-square="d2"><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-e2" style="width: 49px; height: 49px" id="e2-01b4-5a8e-d813-e715-2458-d097-de8a-3d96" data-square="e2"></div><div class="square-55d63 black-3c85d square-f2" style="width: 49px; height: 49px" id="f2-7b42-6386-7639-3248-fc8f-0137-6b67-b7ee" data-square="f2"><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-g2" style="width: 49px; height: 49px" id="g2-a0f4-c8db-f2d9-07bf-2ecb-40d7-796f-2653" data-square="g2"><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-h2" style="width: 49px; height: 49px" id="h2-e46a-f31a-c6d7-07e5-654c-ca36-87b7-395b" data-square="h2"><img src="./Only Allow Legal Moves Example_files/wP.png" alt="" class="piece-417db" data-piece="wP" style="width: 49px;height: 49px;"></div><div class="clearfix-7da63"></div></div><div class="row-5277c"><div class="square-55d63 black-3c85d square-a1" style="width: 49px; height: 49px" id="a1-bf34-e0fd-f3e6-c89a-0dc8-8105-1f24-8baa" data-square="a1"><div class="notation-322f9 alpha-d2270">a</div><div class="notation-322f9 numeric-fc462">1</div><img src="./Only Allow Legal Moves Example_files/wR.png" alt="" class="piece-417db" data-piece="wR" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-b1" style="width: 49px; height: 49px" id="b1-9422-6ac4-8c4d-0955-6705-646e-e09a-de72" data-square="b1"><div class="notation-322f9 alpha-d2270">b</div><img src="./Only Allow Legal Moves Example_files/wN.png" alt="" class="piece-417db" data-piece="wN" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-c1" style="width: 49px; height: 49px" id="c1-dc30-9790-8c10-37a5-4471-8a6d-1961-d710" data-square="c1"><div class="notation-322f9 alpha-d2270">c</div><img src="./Only Allow Legal Moves Example_files/wB.png" alt="" class="piece-417db" data-piece="wB" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-d1" style="width: 49px; height: 49px" id="d1-0759-9eb7-27a3-7697-7b49-d849-0d00-94fb" data-square="d1"><div class="notation-322f9 alpha-d2270">d</div><img src="./Only Allow Legal Moves Example_files/wQ.png" alt="" class="piece-417db" data-piece="wQ" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-e1" style="width: 49px; height: 49px" id="e1-04b4-644d-a848-082d-4ea3-e149-2d7d-f06b" data-square="e1"><div class="notation-322f9 alpha-d2270">e</div><img src="./Only Allow Legal Moves Example_files/wK.png" alt="" class="piece-417db" data-piece="wK" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-f1" style="width: 49px; height: 49px" id="f1-3c95-5ec6-dd65-592e-5fc0-ef00-08da-edce" data-square="f1"><div class="notation-322f9 alpha-d2270">f</div><img src="./Only Allow Legal Moves Example_files/wB.png" alt="" class="piece-417db" data-piece="wB" style="width: 49px;height: 49px;"></div><div class="square-55d63 black-3c85d square-g1" style="width: 49px; height: 49px" id="g1-be49-a8ac-748e-f129-8df8-9b73-a29e-b854" data-square="g1"><div class="notation-322f9 alpha-d2270">g</div><img src="./Only Allow Legal Moves Example_files/wN.png" alt="" class="piece-417db" data-piece="wN" style="width: 49px;height: 49px;"></div><div class="square-55d63 white-1e1d7 square-h1" style="width: 49px; height: 49px" id="h1-9d41-8ffd-f8e7-1430-60c8-64c7-3443-cabd" data-square="h1"><div class="notation-322f9 alpha-d2270">h</div><img src="./Only Allow Legal Moves Example_files/wR.png" alt="" class="piece-417db" data-piece="wR" style="width: 49px;height: 49px;"></div><div class="clearfix-7da63"></div></div></div></div></div>
+<p>Status: <span id="status">White to move</span></p>
+<p>FEN: <span id="fen">rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2</span></p>
+<p>PGN: <span id="pgn">1. e4 e5</span></p>
+<!-- end example HTML --->
+
+<script src="./Only Allow Legal Moves Example_files/json3.min.js.download"></script>
+<script src="./Only Allow Legal Moves Example_files/jquery-1.10.1.min.js.download"></script>
+<script src="./Only Allow Legal Moves Example_files/chessboard.js.download"></script>
+<script>
+var init = function() {
+
+//--- start example JS ---
+var board,
+  game = new Chess(),
+  statusEl = $('#status'),
+  fenEl = $('#fen'),
+  pgnEl = $('#pgn');
+
+// do not pick up pieces if the game is over
+// only pick up pieces for the side to move
+var onDragStart = function(source, piece, position, orientation) {
+  if (game.game_over() === true ||
+      (game.turn() === 'w' && piece.search(/^b/) !== -1) ||
+      (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
+    return false;
+  }
+};
+
+var onDrop = function(source, target) {
+  // see if the move is legal
+  var move = game.move({
+    from: source,
+    to: target,
+    promotion: 'q' // NOTE: always promote to a queen for example simplicity
+  });
+
+  // illegal move
+  if (move === null) return 'snapback';
+
+  updateStatus();
+};
+
+// update the board position after the piece snap 
+// for castling, en passant, pawn promotion
+var onSnapEnd = function() {
+  board.position(game.fen());
+};
+
+var updateStatus = function() {
+  var status = '';
+
+  var moveColor = 'White';
+  if (game.turn() === 'b') {
+    moveColor = 'Black';
+  }
+
+  // checkmate?
+  if (game.in_checkmate() === true) {
+    status = 'Game over, ' + moveColor + ' is in checkmate.';
+  }
+
+  // draw?
+  else if (game.in_draw() === true) {
+    status = 'Game over, drawn position';
+  }
+
+  // game still on
+  else {
+    status = moveColor + ' to move';
+
+    // check?
+    if (game.in_check() === true) {
+      status += ', ' + moveColor + ' is in check';
+    }
+  }
+
+  statusEl.html(status);
+  fenEl.html(game.fen());
+  pgnEl.html(game.pgn());
+};
+
+var cfg = {
+  draggable: true,
+  position: 'start',
+  onDragStart: onDragStart,
+  onDrop: onDrop,
+  onSnapEnd: onSnapEnd
+};
+board = ChessBoard('board', cfg);
+
+updateStatus();
+//--- end example JS ---
+
+}; // end init()
+$(document).ready(init);
+</script>
+
+<img src="./Only Allow Legal Moves Example_files/bP.png" id="80f5-6e7a-abdb-b938-c3f2-7659-2718-fd53" alt="" class="piece-417db" data-piece="wP" style="height: 49px; width: 49px; position: absolute; left: 206px; top: 237px; display: none;"></body><object id="9a9a583b-090a-bfaf-593a-39807890aea0" width="0" height="0" type="application/gas-events-cef"></object></html>
